@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-	<meta charset="utf-8">
+	<link rel = "icon" href="img/icon.ico" type="image/x-icon">
+    <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
-	<link rel = "icon" href="./img/icon.ico" type="image/x-icon">
 	<title>这里油只喵</title>
     <link rel="stylesheet" type="text/css" href="img.css">
     <style>
@@ -38,16 +38,60 @@
 
         
     </div>
-    <p>油喵网页</p>
+    
+    <p>
+        油喵猫协
+    </p>
     
     <div class="img-mask"> // 图片放大
         <img id="bigImg" src="" alt="放大图片">
     </div>
     
+    <div style="text-align:center; margin:50px 0;">
+        <div style="position:relative; display:inline-block;">
+            <img id="shehui" src="./img/icon.jpg" alt="社徽" style="width:100px; cursor:pointer;transition: transform 0.3s ease;">
+
+            <span style="visibility:hidden;  opacity:0;position:absolute; bottom:110%; left:50%; transform:translateX(-50%); background:#d62828; color:white; padding:6px 12px; border-radius:6px; white-space:nowrap; transition:0.3s; font-size:14px;">
+                加入我们！
+            </span>
+        </div>
+    </div>
+    
+    <div id="mask2" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:999;text-align:center;">
+        <img id="join" src="./img/join.jpg" alt="加入我们！" style="max-width:90%; max-height:90vh; margin-top:5vh;">
+    </div>
+
+
     <script>
+    const shehui = document.getElementById('shehui');
+    const join = document.getElementById('join');
+    const mask2 = document.getElementById('mask2');
+    const tip = shehui.nextElementSibling;
+
     const allImg = document.querySelectorAll('.pic-box img');
     const mask = document.querySelector('.img-mask');
     const bigImg = document.getElementById('bigImg');
+    
+    shehui.onmouseenter = function(){
+        tip.style.visibility = "visible";
+        tip.style.opacity = "1";
+        shehui.style.transform = "scale(1.1)";
+    }
+
+    shehui.onmouseleave = function(){
+        tip.style.visibility = "hidden";
+        tip.style.opacity = "0";
+        shehui.style.transform = "scale(1)";
+    }
+
+    
+    
+    shehui.onclick = function(){
+        mask2.style.display = 'block';
+    }
+    mask2.onclick = function(){
+        mask2.style.display = 'none';
+    }
 
     allImg.forEach(item => {
         item.onclick = function(){
@@ -58,6 +102,7 @@
 
     mask.onclick = function(){
         mask.style.display = 'none';
+
     }</script>
 </body>
 </html>
