@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>这里油只喵</title>
+    <link rel="stylesheet" type="text/css" href="img.css">
+    <style>
+        h1 {
+            text-align: center;
+            font-size: 60px;
+            color: #d62828;
+            font-weight: bold;
+            letter-spacing: 4px;
+        }
+        p {
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+	</style>
+</head>
+<body>
+    <h1>广油小猫</h1>
+    <div class="pic-box">
+        <img src="img/1.jpg" alt="照片1">
+        <img src="img/2.jpg" alt="照片2">
+        <img src="img/3.jpg" alt="照片3">
+        <img src="img/4.jpg" alt="照片4">
+        <img src="img/5.jpg" alt="照片5">
+        <img src="img/6.jpg" alt="照片6">
+        <img src="img/7.jpg" alt="照片7">
+        <img src="img/8.jpg" alt="照片8">
+        <img src="img/9.jpg" alt="照片9">
+        <img src="img/10.jpg" alt="照片10">
+
+        
+    </div>
+    <p>油喵网页</p>
+    
+    <div class="img-mask"> // 图片放大
+        <img id="bigImg" src="" alt="放大图片">
+    </div>
+    
+    <script>
+    const allImg = document.querySelectorAll('.pic-box img');
+    const mask = document.querySelector('.img-mask');
+    const bigImg = document.getElementById('bigImg');
+
+    allImg.forEach(item => {
+        item.onclick = function(){
+            bigImg.src = this.src;
+            mask.style.display = 'flex';
+        }
+    })
+
+    mask.onclick = function(){
+        mask.style.display = 'none';
+    }</script>
+</body>
+</html>
