@@ -12,13 +12,13 @@
     display: block;
     margin-bottom: 15px;
     min-width: 280px;
-    cursor: pointer;
-    transition: 0.2s;
+    cursor: zoom-in;
+    transition: 0.1s;
 }
 
 
 .pic-box img:hover {
-    transform: scale(1.02);
+    transform: scale(1.1);
 }
 .img-mask {
     display: none;
@@ -27,7 +27,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(0,0,0,0.9);
+    background: rgba(0,0,0,0.7);
     z-index: 999;
     align-items: center;
     justify-content: center;
