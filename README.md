@@ -6,7 +6,7 @@
 <kbd>协会介绍
 |[这里油只喵！](https://campus-cats.pages.dev/ "猫协") |
 |:-:|
-|[猫咪图片](https://dthry.github.io/youmiao/ "查看图片")|
+|[猫咪图片墙](https://dthry.github.io/youmiao/ "查看图片")|
 
 ---
 
