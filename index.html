@@ -23,8 +23,9 @@
         }
         p {
             text-align: center;
-            font-size: 30px;
+            font-size: 50px;
             font-weight: bold;
+            color: #047699;
             letter-spacing: 2px;
         }
 	</style>
@@ -58,9 +59,9 @@
     
     <div style="text-align:center; margin:50px 0;">
         <div style="position:relative; display:inline-block;">
-            <img id="shehui" src="./img/icon.jpg" alt="社徽" style="width:100px; cursor:zoom-in;transition: transform 0.3s ease;">
+            <img id="shehui" src="./img/icon.jpg" alt="社徽" style="width:100px; cursor:zoom-in;transition: transform 0.5s ease;">
 
-            <span style="visibility:hidden;  opacity:0;position:absolute; bottom:110%; left:50%; transform:translateX(-50%); background:#d62828; color:white; padding:6px 12px; border-radius:6px; white-space:nowrap; transition:0.3s; font-size:14px;">
+            <span style="visibility:hidden;  opacity:0;position:absolute; bottom:110%; left:50%; transform:translateX(-50%); background:#d62828; color:white; padding:6px 12px; border-radius:6px; white-space:nowrap; transition:0.5s; font-size:14px;">
                 加入我们！
             </span>
         </div>
@@ -84,7 +85,7 @@
     shehui.onmouseenter = function(){
         tip.style.visibility = "visible";
         tip.style.opacity = "1";
-        shehui.style.transform = "scale(1.1)";
+        shehui.style.transform = "scale(1.5)";
     }
 
     shehui.onmouseleave = function(){
